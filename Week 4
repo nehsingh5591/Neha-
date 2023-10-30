@@ -1,0 +1,91 @@
+package textbasedadventuregame;
+import java.util.Scanner;
+public class HauntedHouseGame {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		 System.out.println("You find yourself standing in front of a creepy old haunted house.");
+		 System.out.println("The house looks abandoned and has an eerie aura about it.");
+		 System.out.println("You can hear strange noises coming from inside.");
+		 System.out.println("Do you want to enter the house? (yes/no)");
+		 String choice = scanner.nextLine().toLowerCase();
+		 if (choice.equals("yes")) {
+		 startGame(scanner);
+		 } else if (choice.equals("no")) {
+		 System.out.println("You chicken out and run away.");
+		 } else {
+		 System.out.println("Invalid choice. Please enter 'yes' or 'no'or'");
+		 }
+		 }
+		 public static void startGame(Scanner scanner) {
+		 System.out.println("You enter the haunted house.");
+		 System.out.println("The door slams shut behind you, and you hear it lock.");
+		 System.out.println("You are in a dimly lit hallway. There are three doors.");
+		 System.out.println("Which door do you choose? (1/2/3)");
+		 String choice = scanner.nextLine();
+		 if (choice.equals("1")) {
+		 room1(scanner);
+		 } else if (choice.equals("2")) {
+		 room2(scanner);
+		 } else if (choice.equals("3")) {
+		 room3(scanner);
+		 } else {
+		 System.out.println("Invalid choice. Please enter 1, 2, or 3.");
+		 startGame(scanner);
+		 }
+		 }
+		 public static void room1(Scanner scanner) {
+		 System.out.println("You enter a dusty old library.");
+		 System.out.println("There's a ghostly figure sitting at a table, reading a book.");
+		 System.out.println("The figure looks up at you and beckons you to come closer.");
+		 System.out.println("Do you approach the ghost? (yes/no)");
+		 String choice = scanner.nextLine().toLowerCase();
+		 if (choice.equals("yes")) {
+			 System.out.println("The ghost vanishes, leaving a dusty old book behind.");
+	System.out.println("You take the book and return to the hallway.");
+	   startGame(scanner);
+		} else if (choice.equals("no")) {
+	System.out.println("You leave the library and return to the hallway.");
+		 startGame(scanner);
+			} else {
+	 System.out.println("Invalid choice. Please enter 'yes' or 'no.'");
+			 room1(scanner);
+			 }
+			 }
+	public static void room2(Scanner scanner) {
+			 System.out.println("You enter a dark and damp basement.");
+			 System.out.println("There are strange noises coming from the shadows.");
+			 System.out.println("You see a flickering light in the corner.");
+			 System.out.println("Do you investigate the light? (yes/no)");
+			 String choice = scanner.nextLine().toLowerCase();
+			 if (choice.equals("yes")) {
+			 System.out.println("As you approach the light, you discover a hidden exit.");
+			 System.out.println("You escape the haunted house and win the game!");
+			 } else if (choice.equals("no")) {
+				 System.out.println("You decide it's too risky and return to the hallway.");
+						  startGame(scanner);
+						  } else {
+						  System.out.println("Invalid choice. Please enter 'yes' or 'no.'");
+						  room2(scanner);
+						  }
+						  }
+	 public static void room3(Scanner scanner) {
+		System.out.println("You enter a creepy bedroom with old, creaky furniture.");
+	    System.out.println("The room is filled with porcelain dolls.");
+		System.out.println("One of the dolls starts moving towards you.");
+		System.out.println("Do you try to grab the doll? (yes/no)");
+		String choice = scanner.nextLine().toLowerCase();
+			if (choice.equals("yes")) {
+		System.out.println("The doll turns out to be harmless and drops a  key.");
+		System.out.println("You take the key and return to the hallway.");
+			 startGame(scanner);
+		 } else if (choice.equals("no")) {
+		System.out.println("You run out of the room in fear and return to the hallway.");
+				startGame(scanner);
+			} else {
+		System.out.println("Invalid choice. Please enter 'yes' or 'no.'");
+			room3(scanner);
+  }
+	}
+	 }
+	
